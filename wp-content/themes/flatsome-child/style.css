@@ -7,7 +7,20 @@ Version: 3.0
 */
 
 /*************** ADD CUSTOM CSS HERE.   ***************/
+.footer-menu li {
+    display: inline-block;
+    margin: 0 2em !important;
+    line-height: 80px;
+    border-top: none !important;
+}
+.footer-menu li a {
+    margin: 0;
+    color: white;
+}
 
+.footer-menu li.current-menu-item {
+    
+}
 
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
