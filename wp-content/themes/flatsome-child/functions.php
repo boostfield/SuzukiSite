@@ -129,4 +129,42 @@ printf( '<li>%s</li>' . "\n", get_next_posts_link('<i class="fa fa-chevron-right
 echo '</ul></div>' . "\n";
  
 }
+function template_chooser($template)   
+{    
+  global $wp_query;   
+  $post_type = get_query_var('post_type');   
+  if( $wp_query->is_search && $post_type == 'teacher' )   
+  {
+    return locate_template('archive-teacher-search.php');  //  redirect to archive-search.php
+  }   
+  return $template;   
+}
+add_filter('template_include', 'template_chooser'); 
+
+add_action( 'pre_get_posts', 'teacher_extended_search' );
+function teacher_extended_search( $query )
+{
+    // Make sure we got a search query
+    // and we're only modifying the main query.
+    if (
+        ! $query->is_main_query()
+        OR 'teacher' !== $query->get( 'post_type' )
+    ) return $query;
+
+    // Alter whatever you need: Make, Model, etc.
+    $query->set( 'meta_query', array(
+        'relation' => 'AND',
+        array(
+            'key'     => 'district',
+            'value'   => $_GET[ 'district' ],
+            'compare' => 'LIKE'
+        ),
+        array(
+            'key'     => 'instrument',
+            'value'   => $_GET[ 'instrument' ],
+            'compare' => 'LIKE'
+        )
+    ) );
+    return $query;
+}
 ?>
