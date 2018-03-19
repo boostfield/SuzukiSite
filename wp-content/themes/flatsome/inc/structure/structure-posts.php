@@ -299,7 +299,7 @@ if ( !function_exists( 'flatsome_posts_pagination' ) ) {
 
             if( is_array( $pages ) ) {
                 $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-                echo '<ul class="page-numbers nav-pagination links text-center">';
+                echo '<ul class="page-numbers nav-pagination links text-right">';
                 foreach ( $pages as $page ) {
                         $page = str_replace("page-numbers","page-number",$page);
                         echo "<li>$page</li>";

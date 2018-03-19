@@ -18,5 +18,6 @@
 		else {
 			echo '<h4>' . __( 'Posts not found', 'shortcodes-ultimate' ) . '</h4>';
 		}
+		echo ds_numeric_posts_nav();
 	?>
 </div>

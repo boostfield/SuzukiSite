@@ -250,7 +250,7 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 					</p>
 					<?php } ?>
 					<h5 class="post-title is-<?php echo $title_size; ?> <?php echo $title_style;?>"><?php the_title(); ?></h5>
-					<?php if((!has_post_thumbnail() && $show_date !== 'false') || $show_date == 'text') {?><div class="post-meta is-small op-8"><?php echo get_the_date(); ?></div><?php } ?>
+					<?php if($show_date == 'text') {?><div class="post-meta is-small op-8"><?php echo get_the_date(); ?></div><?php } ?>
 					<div class="is-divider"></div>
 					<?php if($excerpt !== 'false') { ?>
 					<p class="from_the_blog_excerpt <?php if($excerpt !== 'visible'){ echo 'show-on-hover hover-'.$excerpt; } ?>"><?php
@@ -279,7 +279,7 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 
 					</div><!-- .box-text-inner -->
 					</div><!-- .box-text -->
-					<?php if(has_post_thumbnail() && ($show_date == 'badge' || $show_date == 'true')) {?>
+					<?php if($show_date == 'badge') {?>
 					<?php if(!$badge_style) $badge_style = flatsome_option('blog_badge_style'); ?>
 						<div class="badge absolute top post-date badge-<?php echo $badge_style; ?>">
 							<div class="badge-inner">
