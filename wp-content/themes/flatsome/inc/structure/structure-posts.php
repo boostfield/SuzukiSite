@@ -115,11 +115,11 @@ function flatsome_content_nav( $nav_id ) {
     <nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
 	<div class="flex-row next-prev-nav bt bb">
 		<div class="flex-col flex-grow nav-prev text-left">
-			    <?php previous_post_link( '<div class="nav-previous">%link</div>','<span class="hide-for-small">' .get_flatsome_icon('icon-angle-left') . _x( '', 'Previous post link', 'flatsome-admin' ) . '</span> %title' ); ?>
+			    <?php previous_post_link( '<div class="nav-previous">%link</div>','<span class="hide-for-small">' .get_flatsome_icon('icon-angle-left') . _x( '', 'Previous post link', 'flatsome-admin' ) . '</span><span style="color: #666; font-size: 14px;">上一篇:</span>  %title' ); ?>
 
 		</div>
 		<div class="flex-col flex-grow nav-next text-right">
-			    <?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="hide-for-small">'. get_flatsome_icon('icon-angle-right') . _x( '', 'Next post link', 'flatsome-admin' ) . '</span>' ); ?>
+			    <?php next_post_link( '<div class="nav-next">下一篇: %link</div>', '%title <span class="hide-for-small">'. get_flatsome_icon('icon-angle-right') . _x( '', 'Next post link', 'flatsome-admin' ) . '</span>' ); ?>
 		</div>
 	</div>
 

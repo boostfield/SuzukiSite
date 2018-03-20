@@ -9,7 +9,7 @@
 	$ids = implode(',', $ids);
 ?>
 
-<?php echo do_shortcode('[blog_posts type="row" show_date="text" excerpt="false" image_height="0%" depth="'.flatsome_option('blog_posts_depth').'" depth_hover="'.flatsome_option('blog_posts_depth_hover').'" text_align="left" style="normal" columns="1" ids="'.$ids.'"]'); ?>
+<?php echo do_shortcode('[blog_posts type="row" show_date="text" excerpt="false" image_height="0%" depth="'.flatsome_option('blog_posts_depth').'" depth_hover="'.flatsome_option('blog_posts_depth_hover').'" class="common-list" text_padding="0px 0px 0px 0px" text_align="left" style="normal" columns="1" ids="'.$ids.'"]'); ?>
 
 <?php flatsome_posts_pagination(); ?>
 

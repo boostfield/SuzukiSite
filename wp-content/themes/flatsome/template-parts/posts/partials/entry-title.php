@@ -23,3 +23,4 @@ if ( $single_post && get_theme_mod( 'blog_single_header_meta', 1 ) ) : ?>
 		<?php flatsome_posted_on(); ?>
 	</div><!-- .entry-meta -->
 <?php endif; ?>
+<hr />

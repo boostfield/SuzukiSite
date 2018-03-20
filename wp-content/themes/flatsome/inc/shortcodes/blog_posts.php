@@ -284,7 +284,7 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 						<div class="badge absolute top post-date badge-<?php echo $badge_style; ?>">
 							<div class="badge-inner">
 								<span class="post-date-day"><?php echo get_the_time('d', get_the_ID()); ?></span><br>
-								<span class="post-date-month is-xsmall"><?php echo get_the_time('M', get_the_ID()); ?></span>
+								<span class="post-date-month is-xsmall"><?php echo get_the_time('Y', get_the_ID()); ?>-<?php echo get_the_time('m', get_the_ID()); ?></span>
 							</div>
 						</div>
 					<?php } ?>
