@@ -7,5 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /wordpress-suzuki/index.php [L]
 </IfModule>
-
+php_value upload_max_filesize 300MB
+php_value post_max_size 300MB
+php_value memory_limit 400MB
 # END WordPress

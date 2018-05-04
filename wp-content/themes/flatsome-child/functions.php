@@ -1,3 +1,4 @@
+
 <?php
 function annointed_admin_bar_remove() {
     global $wp_admin_bar;
@@ -26,11 +27,11 @@ function dez_filter_chinese_excerpt( $output ) {
         $labels = array(
             "name" => __( "Teachers", "" ),
             "singular_name" => __( "Teacher", "" ),
-            "menu_name" => __( "Teacher", "" ),
-            "all_items" => __( "All Teachers", "" ),
-            "add_new" => __( "Add New", "" ),
+            "menu_name" => __( "教师", "" ),
+            "all_items" => __( "所有教师", "" ),
+            "add_new" => __( "新建教师", "" ),
             "add_new_item" => __( "Add New Teacher", "" ),
-            "edit_item" => __( "Edit Teacher", "" ),
+            "edit_item" => __( "编辑教师", "" ),
             "new_item" => __( "New Teacher", "" ),
             "view_item" => __( "View Teacher", "" ),
             "view_items" => __( "View Teachers", "" ),
