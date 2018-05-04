@@ -26,11 +26,11 @@ function dez_filter_chinese_excerpt( $output ) {
         $labels = array(
             "name" => __( "Teachers", "" ),
             "singular_name" => __( "Teacher", "" ),
-            "menu_name" => __( "教师", "" ),
-            "all_items" => __( "所有教师", "" ),
-            "add_new" => __( "新建教师", "" ),
+            "menu_name" => __( "教师数据", "" ),
+            "all_items" => __( "所有教师数据", "" ),
+            "add_new" => __( "新建教师数据", "" ),
             "add_new_item" => __( "Add New Teacher", "" ),
-            "edit_item" => __( "编辑教师", "" ),
+            "edit_item" => __( "编辑教师数据", "" ),
             "new_item" => __( "New Teacher", "" ),
             "view_item" => __( "View Teacher", "" ),
             "view_items" => __( "View Teachers", "" ),
@@ -167,4 +167,10 @@ function teacher_extended_search( $query )
     ) );
     return $query;
 }
+add_filter('pre_site_transient_update_core',create_function('$a',"return null;")); // 关闭核心提示
+add_filter('pre_site_transient_update_plugins',create_function('$a',"return null;")); // 关闭插件提示
+add_filter('pre_site_transient_update_themes',create_function('$a',"return null;")); // 关闭主题提示
+remove_action('admin_init','_maybe_update_core');// 禁止 WordPress 检查更新
+remove_action('admin_init','_maybe_update_plugins');// 禁止 WordPress 更新插件
+remove_action('admin_init','_maybe_update_themes'); // 禁止 WordPress 更新主题
 ?>
