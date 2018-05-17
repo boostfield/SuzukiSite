@@ -98,3 +98,6 @@ require_once(ABSPATH . 'wp-settings.php');
 define("FS_METHOD", "direct");
 define("FS_CHMOD_DIR", 0777);
 define("FS_CHMOD_FILE", 0777);
+
+/** 修改cf7权限 */
+define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'edit_others_pages' );
